@@ -17,7 +17,7 @@ fn main() -> std::io::Result<()> {
             let mut input = Default::default();
             std::io::stdin().read_to_string(&mut input).unwrap();
             let result = aoclib::run(args.day, &input);
-            println!("Result:\n{:?}", result);
+            println!("Result:\n{result}");
         })
         .unwrap();
     child.join().unwrap();
