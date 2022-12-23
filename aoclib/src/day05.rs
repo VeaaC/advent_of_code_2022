@@ -1,7 +1,7 @@
 use core::str::FromStr;
 
-pub fn run_impl(input: &str, reverse: bool) -> [char; 100] {
-    let mut result = [' '; 100];
+pub fn run_impl(input: &str, reverse: bool) -> [char; 10000] {
+    let mut result = [' '; 10000];
     let mut stacks = [['~'; 100]; 10];
     let mut stack_size = [0; 10];
 
@@ -43,6 +43,6 @@ pub fn run_impl(input: &str, reverse: bool) -> [char; 100] {
     result
 }
 
-pub fn run(input: &str) -> ([char; 100], [char; 100]) {
+pub fn run(input: &str) -> ([char; 10000], [char; 10000]) {
     (run_impl(input, false), run_impl(input, true))
 }
