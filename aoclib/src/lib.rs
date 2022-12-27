@@ -1,4 +1,4 @@
-#![no_std]
+//#![no_std]
 
 use core::fmt::Write;
 
@@ -15,6 +15,7 @@ mod day10;
 mod day11;
 mod day12;
 mod day13;
+mod day14;
 
 #[allow(clippy::large_enum_variant)]
 #[derive(Debug)]
@@ -79,6 +80,7 @@ pub fn run(day: u8, input: &str) -> Output {
         11 => Output::Number(day11::run(input)),
         12 => Output::Number(day12::run(input)),
         13 => Output::Number(day13::run(input)),
+        14 => Output::Number(day14::run(input)),
         _ => panic!("args"),
     }
 }
