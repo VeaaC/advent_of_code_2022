@@ -12,7 +12,7 @@ fn main() -> std::io::Result<()> {
     let args = Args::parse();
 
     let child = std::thread::Builder::new()
-        .stack_size(1024 * 1024 * 256)
+        .stack_size(16 * 1024 * 1024 * 1024)
         .spawn(move || {
             let mut input = Default::default();
             std::io::stdin().read_to_string(&mut input).unwrap();
