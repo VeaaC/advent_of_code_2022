@@ -1,7 +1,7 @@
 fn handle_block<const WIDTH: usize, const HEIGHT: usize>(
     input_pos: &mut usize,
     input: &[u8],
-    field: &mut [[u8; 9]; 100000000],
+    field: &mut [[u8; 9]; 10000000],
     field_height: &mut usize,
     block: [[u8; WIDTH]; HEIGHT],
 ) {
@@ -72,7 +72,7 @@ fn run_impl(input: &str, limit: usize) -> usize {
         *b"#", //
     ];
 
-    let mut field = [[b' '; 9]; 100000000];
+    let mut field = [[b' '; 9]; 10000000];
     for x in field.last_mut().unwrap() {
         *x = b'#';
     }
