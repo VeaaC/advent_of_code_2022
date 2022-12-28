@@ -18,6 +18,7 @@ mod day13;
 mod day14;
 mod day15;
 mod day16;
+mod day17;
 
 #[allow(clippy::large_enum_variant)]
 #[derive(Debug)]
@@ -85,6 +86,7 @@ pub fn run(day: u8, input: &str) -> Output {
         14 => Output::Number(day14::run(input)),
         15 => Output::Number(day15::run(input)),
         16 => Output::Number(day16::run(input)),
+        17 => Output::Number(day17::run(input)),
         _ => panic!("args"),
     }
 }
